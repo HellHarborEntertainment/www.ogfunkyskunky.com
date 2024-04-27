@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The official website for the dopest duo in underground stoner rap. Funky Skunky is an american hip-op duo signed to Dab & Stab Records / Hell Harbor Entertainment">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funky Skunky</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="node_modules/showdown/dist/showdown.min.js"></script>
+    <style>
+        /* Custom CSS styles */
+        header img { 
+          margin-bottom: 10px;
+        }
+        .content {
+          color: white; /* Change to the desired text color */;
+          list-style-position: outside;
+          text-align: center;
+        }
+
+        .content :link {
+          color: red !important;
+        }
+
+        .content img {
+      max-width: 100%;
+      max-height: 200px; /* Adjust the desired height */
+    }
+      </style>
+  <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3629809203260686"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <img src="logo_main.png" alt="Funky Skunky Logo" style="width: 200px; height: 200px;">
+        <h1>You're In The Skunk Tank</h1>
+        <h2>Home Of The Best Home Grown Funky Skunky</h2>
+        <p></p>
+    </header>
+
+    <div class="divider"></div>
+   
+    <section id="navmenu">
+        <nav>
+            <li><a href="https://OGFunkySkunky.com/index.html">HOME</a></li>
+            <li><a href="https://OGFunkySkunky.com/contact.html">CONTACT</a></li>
+            <li><a href="https://OGFunkySkunky.com/links.html">LINKS</a></li>
+            <li><a href="https://OGFunkySkunky.com/lore.html">LORE</a></li>
+            <li><a href="https://OGFunkySkunky.com/music.html">MUSIC</a></li>
+            <li><a href="https://hellharbor.com/shop.html">SHOP</a></li>
+            <li><a href="https://OGFunkySkunky.com/shows.html">SHOWS</a></li>
+            <li><a href="https://hellharbor.com/touring-and-tickets.html">TICKETS</a></li>
+          </nav>
+    </section>
+
+    <div class="content" id="markdownContent"></div>
+    <script>
+      function convertMarkdownToHTML(markdown) {
+        // Use a Markdown parser library like Showdown.js (https://github.com/showdownjs/showdown)
+        var converter = new showdown.Converter();
+        return converter.makeHtml(markdown);
+      }
+  
+      // Fetch the Markdown content from the URL
+      fetch('https://raw.githubusercontent.com/HellHarborEntertainment/www.OGFunkySkunky.com/main/info/important/contact-details.md')
+        .then(response => response.text())
+        .then(markdown => {
+          // Convert the Markdown content to HTML
+          var html = convertMarkdownToHTML(markdown);
+  
+          // Insert the HTML content into the page
+          document.getElementById('markdownContent').innerHTML = html;
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    </script>
+
+<div class="divider"></div>
+
+<section id="social">
+  <h2>Follow Funky Skunky On Social Media</h2>
+  <a href="https://nav.OGFunkySkunky.com/bandsintown" class="btn" target="_blank">BandsInTown</a>
+  <a href="https://nav.OGFunkySkunky.com/discord" class="btn" target="_blank">Discord</a>
+  <a href="https://nav.OGFunkySkunky.com/facebook" class="btn" target="_blank">Facebook</a>
+  <a href="https://nav.OGFunkySkunky.com/instagram" class="btn" target="_blank">Instagram</a>
+  <a href="https://nav.OGFunkySkunky.com/reddit" class="btn" target="_blank">Reddit</a>
+  <a href="https://nav.OGFunkySkunky.com/snapchat" class="btn" target="_blank">SnapChat</a>
+  <a href="https://nav.OGFunkySkunky.com/twitter" class="btn" target="_blank">X</a>
+</section>
+
+<footer>
+    <p>&copy; 2018-2024 HELL HARBOR ENTERTAINMENT ALL RIGHTS RESERVED</p>
+</footer>
+
+</body>
+</html>
